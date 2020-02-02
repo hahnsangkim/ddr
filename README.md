@@ -70,7 +70,7 @@ mv frontend/hello-world/* frontend/hello-world/.gitignore frontend/ && rmdir fro
 docker run -v $PWD/frontend:/app -p 3000:3000 frontend:latest npm start
 ```
 
-## docker-compose: Consolidate two Dockers
+## docker-compose: Combine the two into one
 ### Setup
 create docker-compose.yml
 ```
