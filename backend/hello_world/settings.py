@@ -25,7 +25,7 @@ SECRET_KEY = 'zrm8cv_tm(urs73l4e186c6*nz-4s*7=!kv=kf!$il)vod!suh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["backend"]
 
 
 # Application definition
