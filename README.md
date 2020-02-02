@@ -4,8 +4,11 @@
 - environment: Docker
 
 ## folder structure
-- /backend
-- /frontend
+- /backend  --> django folder
+- /backend/hello-world --> main app in django
+- /backend/hello-world/settings --> production and dev settings
+- /backend/word-count  --> word-count app in django
+- /frontend  --> react folder
 - /
 
 ## First build each
@@ -138,3 +141,37 @@ another brower for frontend
 ```
 localhost:3000
 ```
+
+## Environment Variables
+- SECRET_KEY
+- PRODUCTION_HOST
+
+## Deployment
+### Install Heroku CLI
+Make sure you installed Heroku CLI. Otherwise do the following
+on Mac
+```
+$ brew install heroku/brew/heroku
+```
+on Ubuntu
+```
+$ sudo snap install heroku --classic
+```
+
+### Create an app in Heroku
+
+```
+$ heroku login
+$ heroku create
+https://vast-escarpment-1234.herokuapp.com
+$ heroku config:set PRODUCTION_HOST=vast-escarpment-1234.herokuapp.com SECRET_KEY=<your secret key> DJANGO_SETTINGS_MODULE=hello_world.settings.production
+```
+
+### Deploy the app to Heroku
+```
+$ heroku stack:set container
+$ git push heroku master
+```
+
+## Reference
+- https://dev.to/englishcraig/docker-django-react-building-assets-and-deploying-to-heroku-24jh
